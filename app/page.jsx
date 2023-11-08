@@ -24,7 +24,7 @@ export default function HalamanIndex() {
       setData({...data, history:getData})
     }
 
-  }, [localStorage.getItem("list")])
+  }, [])
 
 
   const calculateCompatibility = (e) => {

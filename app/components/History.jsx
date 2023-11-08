@@ -9,8 +9,9 @@ export default function HistoryComponent({ dataList, setData, open }) {
             <button onClick={() => setData(false)} className='absolute top-5 right-5'>
                 X
             </button>
-            <h1 className='font-bold text-pink-500'>History Lu</h1>
+            <h1 className='font-bold text-pink-500 mb-5'>History Lu</h1>
             {
+                dataList ?
                 dataList.data.length > 0 ?
                 dataList.data.map((item, key) => {
                     return (
@@ -21,6 +22,7 @@ export default function HistoryComponent({ dataList, setData, open }) {
                 })
                 :
                 <h1 className='text-red-500 text-sm mt-2'>Belum ada history</h1>
+                :"Loading"
             }
         </div>
     </div>

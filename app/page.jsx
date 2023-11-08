@@ -55,7 +55,7 @@ export default function HalamanIndex() {
     Swal.fire({
       title: `${compatibility}%`,
       text: `${text}`,
-      imageUrl: "/images/gambarlia.png",
+      imageUrl: "/images/gambartaki.jpeg",
       imageWidth: 400,
       imageHeight: 300,
       imageAlt: "Custom image"

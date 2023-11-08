@@ -54,7 +54,7 @@ export default function HalamanIndex() {
     const totalName2 = calculateTotal(data.nama2);
 
     // Menghitung persentase berdasarkan total angka dalam nama
-    const count2 = ((totalName1 + totalName2) % 101); // Maksimum 100%
+    const count2 = ((totalName1 + totalName2) % 100); // Maksimum 100%
 
 
     // perhitungan ketiga
@@ -74,9 +74,9 @@ export default function HalamanIndex() {
 
     let text = null
 
-    if(total > 90){
-      text = "Awwww sepertinya kalian berjodoh"
-    }else if(total > 70){
+    if(total > 75){
+      text = "Selamat anda berjodoh"
+    }else if(total > 55){
       text = "Boleh lah boleh lah"
     }else if(total > 40){
       text = "Hmm... Kemungkinan selingkuh sih"
@@ -110,7 +110,7 @@ export default function HalamanIndex() {
       <div className='md:flex items-center justify-center h-screen w-full'>
         <div className='bg-white rounded-2xl shadow-md p-5 md:p-10 block'>
           <h1 className='text-center text-pink-500 font-bold text-2xl md:text-5xl uppercase'>Prediksi Jodoh</h1>
-          <p className='text-center text-xs md:text-sm font-light mb-10 md:mb-20'>Cek kalau jodoh langsung sikat tanpa menunggu dikasih tuhan, kalau ga putusin aja cuy..</p>
+          <p className='text-center text-xs md:text-sm font-light mb-10 md:mb-20'>Cek apakah kalian berjodoh?</p>
           <form onSubmit={(e) => calculateCompatibility(e)} className='block'>
             <div className='md:flex items-center justify-center space-y-8 md:space-y-0 md:gap-10'>
               <input type="text" value={data.nama1} onChange={(e) => setData({...data, nama1:e.target.value})} placeholder='Nama lu' className='font-bold capitalize placeholder:text-zinc-500 py-2 px-5 rounded-md hover:border-blue-400 border-2 border-green-500 focus:border-yellow-500 transition-colors duration-300 ease-in-out w-full md:w-fit' />
